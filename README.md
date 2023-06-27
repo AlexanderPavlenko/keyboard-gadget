@@ -4,6 +4,11 @@ keyboard-gadget
 keyboard-gadget is a shell script that sets up a simple HID keyboard
 gadget via ConfigFS.
 
+Raspberry Pi OS config
+----------------------
+- `/boot/config.txt` – add new line to the bottom: `dtoverlay=dwc2`
+- `/boot/cmdline.txt` – insert after `rootwait`: `modules-load=dwc2,libcomposite`
+
 Usage
 -----
 The script defines all the configurable data at the beginning; edit to
